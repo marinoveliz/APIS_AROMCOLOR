@@ -1,0 +1,14 @@
+# 📦 Paquetes AL y Dependencias
+# Ignora todo el contenido de la carpeta de paquetes descargados
+.alpackages/
+*.app
+
+# ⚙️ Configuraciones de Entorno Local y Seguridad
+# Ignora el launch.json porque contiene Tenant IDs, Environment Names y configuraciones locales
+.vscode/launch.json
+.vscode/rad.json
+
+# 🗑️ Archivos de Compilación y Temporales
+out/
+*.obj
+*.navx

@@ -1,0 +1,49 @@
+{
+  "id": "c5be8cd5-2ae6-491a-a3c2-28d102ef72a3",
+  "name": "APIS",
+  "publisher": "Default Publisher",
+  "version": "1.0.0.2",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [
+    {
+      "id": "ec255f57-31d0-4ca2-b751-f2fa7c745abb",
+      "name": "Shopify Connector",
+      "publisher": "Microsoft",
+      "version": "27.0.0.0"
+    },
+    {
+      "id": "c69e55ce-9a52-42c3-9929-765dab3b5da8",
+      "name": "Aromcolor",
+      "publisher": "TECNOAV",
+      "version": "1.0.0.8"
+    },
+    {
+      "id": "4c6c730f-a4cf-4fce-ae14-717e0efe5e99",
+      "name": "LocalizacionECTA",
+      "publisher": "TECNOAV",
+      "version": "1.2.8.6"
+    }
+  ],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "27.0.0.0",
+  "idRanges": [
+    {
+      "from": 50100,
+      "to": 50149
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": false,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "16.0",
+  "features": ["NoImplicitWith"]
+}
