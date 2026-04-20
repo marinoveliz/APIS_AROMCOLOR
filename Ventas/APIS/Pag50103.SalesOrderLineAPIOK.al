@@ -25,14 +25,25 @@ page 50103 SalesOrderLineAPI
                 field(no; Rec."No.") { }
                 field(description; Rec.Description) { }
                 field(quantity; Rec.Quantity) { }
-                field(unitPrice; Rec."Unit Price") { }
+                field(unitPrice; Rec."Unit Price")
+                {
+                    trigger OnValidate()
+                    var
+
+                    begin
+                        TempUnitPrice := Rec."Unit Price";
+                    end;
+                }
                 field(unitOfMeasureCode; Rec."Unit of Measure Code") { }
                 field(locationCode; Rec."Location Code") { }
                 field(shipmentDate; Rec."Shipment Date") { }
                 field(shortcutDimension1Code; Rec."Shortcut Dimension 1 Code") { }
+
             }
         }
     }
+    var
+        TempUnitPrice: Decimal;
 
     trigger OnInsertRecord(BelowxRec: Boolean): Boolean
     var
@@ -65,6 +76,10 @@ page 50103 SalesOrderLineAPI
         // 5. Inserción manual con triggers de tabla activos
         Rec.Insert(true);
 
+        if TempUnitPrice <> 0 then begin
+            Rec."Unit Price" := TempUnitPrice;
+            Rec.Modify(true);
+        end;
         // Retornamos false para evitar que el framework intente insertar de nuevo
         exit(false);
     end;

@@ -42,10 +42,6 @@ page 50102 BlanketSalesOrderAPI
                     Caption = 'Quote No';
                 }
 
-                field("YourReference"; Rec."Your Reference")
-                {
-                    Caption = 'Your Reference';
-                }
                 field("PostingDescription"; Rec."Posting Description")
                 {
                     Caption = 'Posting Description';
